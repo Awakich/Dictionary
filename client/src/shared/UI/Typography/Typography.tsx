@@ -3,14 +3,14 @@ import './typography.scss'
 
 type Typography = {
     children?: React.ReactNode,
-    weight: string,
-    size: string,
+    weight?: "normal" | "semibold",
+    size: "h1" | "p",
 }
 
-const Typography: FC<Typography> = ({ children, weight = "normal", size = "h1" }) => {
-    const mode = 'storybook-typography--normal' ? weight === "normal" : 'storybook-typography--bold'
+const Typography: FC<Typography> = ({ children = 'Text', weight = "semibold", size = "h1" }) => {
+    const mode = weight === "semibold" ? 'typography--semibold' : 'typography--normal'
     return (
-        <p className={['storybook-typography', `storybook-typography--${size}`, mode].join(' ')}>{children}</p>
+        <p className={['typography', `typography--${size}`, mode].join(' ')}>{children}</p>
     )
 }
 

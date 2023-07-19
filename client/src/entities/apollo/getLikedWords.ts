@@ -1,9 +1,9 @@
 import { gql } from "@apollo/client";
 
-export const getWord = gql
+export const getLikedWords = gql
     `
-query getWord($id: ID!){
-    word:getWord(id: $id){
+query getLikedWords{
+    likedWords:getLikedWords {
         id,
         title,
         country,

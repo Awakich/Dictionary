@@ -1,0 +1,41 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(#000000, .8);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    &--inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .icon {
+        position: absolute;
+        top: 10%;
+        right: 3%;
+        cursor: pointer;
+        height: 24px;
+        opacity: 100%;
+
+        &:hover {
+            opacity: 70%;
+        }
+    }
+}

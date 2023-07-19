@@ -1,4 +1,5 @@
-export const words = [
-  { id: '1', title: 'Car', country: 'en', translate: 'Машина' },
-  { id: '2', title: 'Cup', country: 'en', translate: 'Кружка' },
-];
+let words = [];
+
+let liked_words = [];
+
+export default { words, liked_words };

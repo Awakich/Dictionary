@@ -1,34 +1,47 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { typeDefs } from './schema.js';
-import { words } from './db.js';
+import db from './db.js';
 
 const resolvers = {
   Query: {
-    getWords: () => words,
+    getWords: () => db.words,
     getWord: (_, { id }) => {
-      return words.find((word) => word.id === id);
+      return db.words.find((word) => word.id === id);
     },
+    getLikedWords: () => db.liked_words,
   },
 
   Mutation: {
     addWord: (_, args) => {
-      const word = {
+      let word = {
         id: (Math.random() * 100).toFixed(),
         ...args.word,
       };
 
-      words.push(word);
+      db.words.push(word);
 
       return word;
     },
 
+    addLikedWord: (_, args) => {
+      let liked_word = {
+        id: (Math.random() * 100).toFixed(),
+        ...args.word,
+      };
+
+      db.liked_words.push(liked_word);
+
+      return db.liked_word;
+    },
+
     deleteWord: (_, { id }) => {
-      return words.filter((word) => word.id !== id);
+      db.words = db.words.filter((word) => word.id !== id);
+      return db.words;
     },
 
     updateWord: (_, { id, edits }) => {
-      let word = words.find((word) => word.id === id);
+      let word = db.words.find((word) => word.id === id);
       word.title = edits.title;
       word.translate = edits.translate;
       word.country = edits.country;

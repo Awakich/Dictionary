@@ -1,0 +1,11 @@
+.createword {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--inputs {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+}

@@ -3,11 +3,11 @@ import { gql } from "@apollo/client";
 export const getWords = gql
     `
     query getWords {
-        getWords {
+        words:getWords {
             id,
             title,
             country,
-            translate
+            translate,
         }
     }
 `
