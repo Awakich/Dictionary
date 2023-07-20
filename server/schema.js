@@ -4,7 +4,7 @@ export const typeDefs = `#graphql
     title: String!,
     country: String!,
     translate: String!,
-    liked: Boolean,
+    liked: Boolean!,
   }
 
   type Query {
@@ -16,6 +16,7 @@ export const typeDefs = `#graphql
   type Mutation {
     addWord(word: AddWordInput!): Word!
     deleteWord(id: ID!): [Word]!
+    deleteLikedWord(id: ID!): [Word]!
     updateWord(id: ID!, edits: UpdateWordInput!): Word!
     addLikedWord(word: AddLikedWord!): Word!
   }
@@ -24,9 +25,9 @@ export const typeDefs = `#graphql
     title: String!,
     country: String!,
     translate: String!,
+    liked: Boolean!,
   }
 
-  
   input AddLikedWord {
     title: String!,
     country: String!,

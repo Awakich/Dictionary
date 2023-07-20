@@ -25,19 +25,24 @@ const resolvers = {
     },
 
     addLikedWord: (_, args) => {
-      let liked_word = {
+      let word = {
         id: (Math.random() * 100).toFixed(),
         ...args.word,
       };
 
-      db.liked_words.push(liked_word);
+      db.liked_words.push(word);
 
-      return db.liked_word;
+      return word;
     },
 
     deleteWord: (_, { id }) => {
       db.words = db.words.filter((word) => word.id !== id);
       return db.words;
+    },
+
+    deleteLikedWord: (_, { id }) => {
+      db.liked_words = db.liked_words.filter((word) => word.id !== id);
+      return db.liked_words;
     },
 
     updateWord: (_, { id, edits }) => {

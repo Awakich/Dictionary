@@ -8,6 +8,7 @@ mutation addWord($word: AddWordInput!){
     country,
     title,
     translate,
+    liked,
   }
 }
 `

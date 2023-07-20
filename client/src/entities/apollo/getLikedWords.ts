@@ -3,11 +3,12 @@ import { gql } from "@apollo/client";
 export const getLikedWords = gql
     `
 query getLikedWords{
-    likedWords:getLikedWords {
+    liked:getLikedWords {
         id,
         title,
         country,
         translate,
+        liked,
     }
 }
 `

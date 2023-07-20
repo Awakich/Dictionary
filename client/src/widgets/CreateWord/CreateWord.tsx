@@ -44,6 +44,7 @@ const CreateWord: FC = ({ }) => {
                                 title: userInputTitle,
                                 translate: userInputTranslate,
                                 country: userInputCountry,
+                                liked: false
                             }
                         }
                     })

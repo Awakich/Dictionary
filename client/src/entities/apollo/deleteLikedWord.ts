@@ -1,14 +1,15 @@
 import { gql } from "@apollo/client";
 
-export const getWord = gql
+
+export const deleteLikedWord = gql
     `
-query getWord($id: ID!){
-    word:getWord(id: $id){
+mutation deleteLikedWord($id: ID!){
+    deleteLikedWord(id: $id) {
         id,
         title,
         country,
         translate,
         liked,
-    }
+    } 
 }
 `

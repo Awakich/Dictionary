@@ -1,0 +1,29 @@
+.word {
+    border-radius: 20px;
+    padding: 0px 50px;
+    background-color: #ccc;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+
+
+    .icon {
+        cursor: pointer;
+        height: 24px;
+        opacity: 100%;
+
+        &:hover {
+            opacity: 70%;
+        }
+    }
+
+}
