@@ -39,5 +39,6 @@ export const typeDefs = `#graphql
     title: String!,
     country: String!,
     translate: String!,
+    liked: Boolean!,
   }
 `;

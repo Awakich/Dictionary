@@ -19,8 +19,8 @@ const LikedWord: FC<WordType> = ({ country, title, translate, id }) => {
     if (error) return <Typography size='h1' weight='semibold'>Error</Typography>
 
     return (
-        <section className='word'>
-            <div className='word--inner'>
+        <section className='likedword'>
+            <div className='likedword--inner'>
                 <WordInner value={title} name="Название" />
                 <WordInner value={translate} name="Перевод" />
                 <WordInner value={country} name="Город" />

@@ -38,4 +38,15 @@
             opacity: 70%;
         }
     }
+
+    .rename {
+        margin-top: 10px;
+
+        &--inputs {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+    }
 }

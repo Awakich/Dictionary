@@ -9,7 +9,7 @@ import { addLikedWord } from '../../entities/apollo/addLikedWord'
 import WordInner from '../WordInner/WordInner'
 import Typography from '../../shared/UI/Typography/Typography'
 import Modal from '../Modal/Modal'
-import '../Word/word.scss'
+import './word.scss'
 
 const Word: FC<WordType> = ({ country, title, translate, id }) => {
     const [open, setOpen] = useState<boolean>(false)
@@ -20,11 +20,7 @@ const Word: FC<WordType> = ({ country, title, translate, id }) => {
         ]
     })
 
-    const [addLikedWordHandler, { }] = useMutation(addLikedWord, {
-        refetchQueries: [
-            { query: getWords }
-        ]
-    })
+    const [addLikedWordHandler, { }] = useMutation(addLikedWord)
 
     if (error) return <Typography size='h1' weight='semibold'>Error</Typography>
 
