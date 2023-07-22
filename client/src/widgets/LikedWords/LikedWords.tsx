@@ -1,10 +1,10 @@
-import { FC, Fragment, useState } from 'react'
+import { FC, Fragment, useState, ChangeEvent } from 'react'
 import { useQuery } from '@apollo/client'
 import { getLikedWords } from '../../entities/apollo/getLikedWords'
 import { WordType } from '../../types/models'
 import Typography from '../../shared/UI/Typography/Typography'
 import LikedWord from "../LikedWord/LikedWord"
-import Input from '../../shared/UI/Input/Input'
+import Filter from '../../shared/UI/Filter/Filter'
 import './likedwords.scss'
 
 const LikedWords: FC = ({ }) => {
@@ -18,9 +18,7 @@ const LikedWords: FC = ({ }) => {
 
     return (
         <Fragment>
-            <div className='filter'>
-                <Input placeholder='Поиск по названию' userInput={userInput} inputHandler={(e) => setUserInput(e.target.value)} />
-            </div>
+            <Filter placeholder='Поиск по названию' userInput={userInput} inputHandler={(e: ChangeEvent<HTMLInputElement>) => setUserInput(e.target.value)} />
 
             <section className='words'>
                 {data.liked.filter((word: WordType) => userInput.toLowerCase().trim() === "" ? word : word.title.toLowerCase().includes(userInput.toLowerCase())).map(({ id, liked, title, country, translate }: WordType) => (

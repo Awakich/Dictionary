@@ -1,40 +1,42 @@
+@import '../../../app/index.scss';
+
 .storybook-button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
+  font-weight: $bold;
+  border: $zero;
+  border-radius: $rounded;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
 
   &--primary {
-    color: white;
-    background-color: #333;
+    color: $white;
+    background-color: $black;
     transition: all;
 
     &:hover {
-      background-color: #444;
+      background-color: $light_black;
     }
   }
 
   &--secondary {
-    color: #333;
+    color: $black;
     background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    border: 1px solid $black;
     transition: all;
 
     &:hover {
-      background: #f8f8f8;
+      background: $light_gray;
     }
   }
 
   &--small {
-    font-size: 12px;
-    padding: 10px 16px;
+    font-size: $small;
+    padding: $gap $btn_big_size;
   }
 
   &--large {
-    font-size: 16px;
-    padding: 14px 60px;
+    font-size: $btn_big_size;
+    padding: $btn_small_size $padding_big;
   }
 }

@@ -1,13 +1,8 @@
-import { ChangeEvent, FC } from 'react'
+import { FC } from 'react'
+import { InputType } from '../../../types/models'
 import './input.scss'
 
-type Input = {
-    placeholder: string;
-    userInput: string;
-    inputHandler: (e: ChangeEvent<HTMLInputElement>) => void;
-}
-
-const Input: FC<Input> = ({ placeholder, userInput, inputHandler }) => {
+const Input: FC<InputType> = ({ placeholder, userInput, inputHandler }) => {
 
     return (
         <input alt='text' value={userInput} className="input" onChange={inputHandler} placeholder={placeholder} />

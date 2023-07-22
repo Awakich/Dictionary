@@ -1,12 +1,14 @@
+@import '../../app/index.scss';
+
 .overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: $zero;
+    left: $zero;
+    right: $zero;
+    bottom: $zero;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(#000000, .8);
+    background-color: rgba($black, .8);
 }
 
 .modal {
@@ -15,38 +17,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10000;
-    padding: 50px;
-    background-color: #fff;
-    border-radius: 20px;
+    padding: $padding_big;
+    background-color: $white;
+    border-radius: $rounded;
 
     &--inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
+        @include inner_styles;
     }
 
     .icon {
+        @include icon_styles;
         position: absolute;
         top: 10%;
         right: 3%;
-        cursor: pointer;
-        height: 24px;
-        opacity: 100%;
-
-        &:hover {
-            opacity: 70%;
-        }
     }
 
     .rename {
-        margin-top: 10px;
+        margin-top: $rounded;
 
         &--inputs {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
+            margin-bottom: $rounded;
+            margin-top: $rounded;
+            @include inner_styles;
         }
     }
 }

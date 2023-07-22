@@ -1,17 +1,19 @@
+@import '../../../app/index.scss';
+
 .typography {
     &--normal {
-        font-weight: 400;
+        font-weight: $regular;
     }
 
     &--semibold {
-        font-weight: 600;
+        font-weight: $medium;
     }
 
     &--h1 {
-        font-size: 40px;
+        font-size: $margin_medium;
     }
 
     &--p {
-        font-size: 24px;
+        font-size: $medium_size;
     }
 }

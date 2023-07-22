@@ -1,4 +1,7 @@
+@import '../../app/index.scss';
+
 .liked {
     display: flex;
     flex-direction: column;
+    gap: $rounded;
 }

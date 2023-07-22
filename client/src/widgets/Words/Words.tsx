@@ -1,9 +1,9 @@
-import { FC, Fragment, useState } from 'react'
+import { FC, Fragment, useState, ChangeEvent } from 'react'
 import { useQuery } from '@apollo/client'
 import { getWords } from '../../entities/apollo/getWords'
 import { WordType } from '../../types/models'
 import Typography from '../../shared/UI/Typography/Typography'
-import Input from '../../shared/UI/Input/Input'
+import Filter from '../../shared/UI/Filter/Filter'
 import Word from '../Word/Word'
 import './words.scss'
 
@@ -19,9 +19,7 @@ const Words: FC = ({ }) => {
 
     return (
         <Fragment>
-            <div className='filter'>
-                <Input placeholder='Поиск по названию' userInput={userInput} inputHandler={(e) => setUserInput(e.target.value)} />
-            </div>
+            <Filter placeholder='Поиск по названию' userInput={userInput} inputHandler={(e: ChangeEvent<HTMLInputElement>) => setUserInput(e.target.value)} />
 
             <section className='words'>
                 {data.words.filter((word: WordType) => userInput.toLowerCase().trim() === "" ? word : word.title.toLowerCase().includes(userInput.toLowerCase()))

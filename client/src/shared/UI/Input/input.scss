@@ -1,10 +1,12 @@
+@import '../../../app/index.scss';
+
 .input {
-    border: 0;
-    background-color: #333;
-    color: #fff;
+    border: $zero;
+    background-color: $black;
+    color: $white;
     text-align: center;
-    padding: 20px 60px;
+    padding: $rounded $padding_big;
     outline: none;
-    font-size: 16px;
-    border-radius: 10px;
+    font-size: $btn_big_size;
+    border-radius: $gap;
 }

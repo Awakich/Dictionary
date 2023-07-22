@@ -1,6 +1,5 @@
+@import '../../app/index.scss';
+
 .wordinner {
-    gap: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include inner_styles;
 }

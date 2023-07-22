@@ -1,11 +1,11 @@
+@import '../../app/index.scss';
+
 .createword {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include header_styles;
 
     &--inputs {
-        display: flex;
-        align-items: center;
-        gap: 40px;
+        @include inner_styles;
+        margin-bottom: $rounded;
+        margin-top: $rounded;
     }
 }

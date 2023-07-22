@@ -43,25 +43,28 @@ const Modal: FC<Props> = ({ id, closeModal }) => {
                     <WordInner value={data.word.country} name="Город" />
                 </div>
 
-                <Button label='Переимновать' primary={false} size='large' onClick={() => setRename(!rename)} />
+                <Button label='Переименовать' primary={false} size='large' onClick={() => setRename(!rename)} />
 
                 {rename && <div className='rename'>
                     <Button label='Ок' primary={true} size='large' onClick={() => {
-                        updateWordHandler({
-                            variables: {
-                                updateWordId: id,
-                                edits: {
-                                    title: userInputTitle,
-                                    country: userInputCountry,
-                                    translate: userInputTranslate,
-                                    liked: data.word.liked
+                        if (userInputCountry.trim().length > 0 && userInputTranslate.trim().length > 0 && userInputTitle.trim().length > 0) {
+                            updateWordHandler({
+                                variables: {
+                                    updateWordId: id,
+                                    edits: {
+                                        title: userInputTitle,
+                                        country: userInputCountry,
+                                        translate: userInputTranslate,
+                                        liked: data.word.liked
+                                    }
                                 }
-                            }
-                        })
-                        setRename(!rename)
-                        setUserInputTitle("")
-                        setUserInputCountry("")
-                        setUserInputTranslate("")
+                            })
+
+                            setRename(!rename)
+                            setUserInputTitle("")
+                            setUserInputCountry("")
+                            setUserInputTranslate("")
+                        }
                     }} />
 
                     <div className='rename--inputs'>

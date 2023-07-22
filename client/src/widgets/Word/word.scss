@@ -1,34 +1,3 @@
-.word {
-    border-radius: 20px;
-    padding: 0px 50px;
-    background-color: #ccc;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
+@import '../../app/index.scss';
 
-    &--inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .icons {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-
-        .icon {
-            cursor: pointer;
-            height: 24px;
-            opacity: 100%;
-
-            &:hover {
-                opacity: 70%;
-            }
-        }
-    }
-
-}
+@include word_styles;
