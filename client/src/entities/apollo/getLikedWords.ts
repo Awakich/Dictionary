@@ -9,6 +9,7 @@ query getLikedWords{
         country,
         translate,
         liked,
+        type
     }
 }
 `

@@ -8,6 +8,8 @@ mutation updateWord($updateWordId: ID!, $edits: UpdateWordInput!){
     title,
     country,
     translate,
+    liked,
+    type,
   }
 }
 `

@@ -9,6 +9,7 @@ query getWord($id: ID!){
         country,
         translate,
         liked,
+        type
     }
 }
 `

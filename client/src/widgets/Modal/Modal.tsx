@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { getWord } from '../../entities/apollo/getWord'
 import { useMutation, useQuery } from '@apollo/client'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { updateWord } from '../../entities/apollo/updateWod'
+import { updateWord } from '../../entities/apollo/updateWord'
 import WordInner from '../WordInner/WordInner'
 import Typography from '../../shared/UI/Typography/Typography'
 import Button from '../../shared/UI/Button/Button'
@@ -55,7 +55,8 @@ const Modal: FC<Props> = ({ id, closeModal }) => {
                                         title: userInputTitle,
                                         country: userInputCountry,
                                         translate: userInputTranslate,
-                                        liked: data.word.liked
+                                        liked: data.word.liked,
+                                        type: data.word.type
                                     }
                                 }
                             })

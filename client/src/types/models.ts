@@ -11,5 +11,6 @@ export type WordType = {
     title: string,
     country: string,
     translate: string,
-    liked: boolean
+    liked: boolean,
+    type: number,
 }

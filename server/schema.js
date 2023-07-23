@@ -5,6 +5,7 @@ export const typeDefs = `#graphql
     country: String!,
     translate: String!,
     liked: Boolean!,
+    type: Int!,
   }
 
   type Query {
@@ -26,6 +27,7 @@ export const typeDefs = `#graphql
     country: String!,
     translate: String!,
     liked: Boolean!,
+    type: Int!,
   }
 
   input AddLikedWord {
@@ -33,6 +35,7 @@ export const typeDefs = `#graphql
     country: String!,
     translate: String!,
     liked: Boolean!,
+    type: Int!,
   }
 
   input UpdateWordInput{
@@ -40,5 +43,6 @@ export const typeDefs = `#graphql
     country: String!,
     translate: String!,
     liked: Boolean!,
+    type: Int!,
   }
 `;

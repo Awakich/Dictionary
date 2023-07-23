@@ -10,6 +10,7 @@ mutation deleteLikedWord($id: ID!){
         country,
         translate,
         liked,
+        type
     } 
 }
 `

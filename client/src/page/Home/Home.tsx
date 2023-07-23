@@ -7,7 +7,7 @@ const Home: FC = () => {
     return (
         <section>
             <CreateWord />
-            <Words />
+            <Words type={0} />
         </section>
     )
 }

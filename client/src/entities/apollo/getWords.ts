@@ -8,7 +8,8 @@ export const getWords = gql
             title,
             country,
             translate,
-            liked
+            liked,
+            type
         }
     }
 `
