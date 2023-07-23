@@ -8,9 +8,7 @@ import Filter from '../../shared/UI/Filter/Filter'
 import Word from '../Word/Word'
 import './words.scss'
 
-type Type = {
-    type: number;
-}
+type Type = { type: number }
 
 const Words: FC<Type> = ({ type }) => {
     const [userInput, setUserInput] = useState<string>("")

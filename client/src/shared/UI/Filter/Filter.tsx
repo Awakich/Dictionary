@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { InputType } from '../../../types/models'
 import Input from '../Input/Input'
+import './filter.scss'
 
 const Filter: FC<InputType> = ({ userInput, inputHandler }) => {
     return (

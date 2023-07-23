@@ -6,12 +6,12 @@ import { useMutation } from '@apollo/client'
 import { deleteWord } from '../../entities/apollo/deleteWord'
 import { getWords } from '../../entities/apollo/getWords'
 import { addLikedWord } from '../../entities/apollo/addLikedWord'
+import { deleteLikedWord } from '../../entities/apollo/deleteLikedWord'
+import { getLikedWords } from '../../entities/apollo/getLikedWords'
 import WordInner from '../WordInner/WordInner'
 import Typography from '../../shared/UI/Typography/Typography'
 import Modal from '../Modal/Modal'
 import './word.scss'
-import { deleteLikedWord } from '../../entities/apollo/deleteLikedWord'
-import { getLikedWords } from '../../entities/apollo/getLikedWords'
 
 const Word: FC<WordType> = ({ country, title, translate, id, type }) => {
     const [open, setOpen] = useState<boolean>(false)

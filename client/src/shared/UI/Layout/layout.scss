@@ -1,5 +1,15 @@
 @import '../../../app/index.scss';
 
 .layout {
-    padding: $zero $padding_big;
+    @media (min-width:280px) {
+        padding: $rounded $gap;
+    }
+
+    @media (min-width:576px) {
+        padding: $gap;
+    }
+
+    @media (min-width:1228px) {
+        padding: $zero $padding_big;
+    }
 }

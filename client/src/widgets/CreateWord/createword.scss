@@ -4,8 +4,21 @@
     @include header_styles;
 
     &--inputs {
-        @include inner_styles;
+        display: flex;
+        flex-direction: column;
         margin-bottom: $rounded;
         margin-top: $rounded;
+        gap: $rounded;
+
+        @media (min-width:768px) {
+            display: flex;
+            flex-direction: row;
+        }
+
+    }
+
+    @media (min-width:1024px) {
+        display: flex;
+        flex-direction: row;
     }
 }

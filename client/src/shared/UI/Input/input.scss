@@ -9,4 +9,8 @@
     outline: none;
     font-size: $btn_big_size;
     border-radius: $gap;
+
+    @media (min-width:280px) {
+        padding: $btn_small_size $btn_big_size;
+    }
 }

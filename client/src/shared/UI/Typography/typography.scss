@@ -15,5 +15,9 @@
 
     &--p {
         font-size: $medium_size;
+
+        @media (min-width:280px) {
+            font-size: $rounded;
+        }
     }
 }

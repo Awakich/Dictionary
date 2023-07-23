@@ -2,4 +2,8 @@
 
 .wordinner {
     @include inner_styles;
+
+    @media (min-width:280px) {
+        gap: $gap;
+    }
 }

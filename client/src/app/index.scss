@@ -29,6 +29,14 @@ $bold: 700;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width:280px) {
+    flex-direction: column;
+  }
+
+  @media (min-width:1024px) {
+    flex-direction: row;
+  }
 }
 
 @mixin words_styles {
@@ -39,12 +47,32 @@ $bold: 700;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: $rounded;
+
+    @media (min-width:280px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: $rounded;
+    }
+
+    @media (min-width:1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: $rounded;
+    }
   }
 }
 
 @mixin inner_styles {
   @include header_styles;
   gap: $rounded;
+
+  @media (min-width:280px) {
+    display: flex;
+    flex-direction: row;
+    gap: $zero;
+  }
 }
 
 @mixin icon_styles {
@@ -68,12 +96,43 @@ $bold: 700;
     justify-content: space-between;
     cursor: pointer;
 
+    @media (min-width:280px) {
+      display: flex;
+      flex-direction: column;
+      gap: $zero;
+      padding: $gap $rounded;
+      cursor: auto;
+    }
+
+    @media (min-width:576px) {
+      cursor: pointer;
+    }
+
+    @media (min-width:640px) {
+      display: flex;
+      flex-direction: row;
+    }
+
     &--inner {
       @include inner_styles;
+
+      @media (min-width:280px) {
+        flex-direction: column;
+      }
+
+      @media (min-width:576px) {
+        flex-direction: row;
+        gap: $gap;
+      }
     }
 
     .icons {
       @include inner_styles;
+
+      @media (min-width:280px) {
+        display: flex;
+        gap: $rounded ;
+      }
     }
 
     .icon {
@@ -82,6 +141,8 @@ $bold: 700;
 
   }
 }
+
+// 280px, 360px, 576px, 640px, 768px, 1024px, 1228px, 1536px
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

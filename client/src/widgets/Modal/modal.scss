@@ -9,6 +9,14 @@
     width: 100%;
     z-index: 1000;
     background-color: rgba($black, .8);
+
+    @media (min-width:280px) {
+        display: none;
+    }
+
+    @media (min-width:576px) {
+        display: block;
+    }
 }
 
 .modal {
@@ -21,8 +29,21 @@
     background-color: $white;
     border-radius: $rounded;
 
+    @media (min-width:280px) {
+        display: none;
+    }
+
+    @media (min-width:576px) {
+        display: block;
+    }
+
     &--inner {
         @include inner_styles;
+
+        @media (min-width:576px) {
+            display: flex;
+            gap: $gap;
+        }
     }
 
     .icon {
@@ -39,6 +60,19 @@
             margin-bottom: $rounded;
             margin-top: $rounded;
             @include inner_styles;
+
+            @media (min-width:576px) {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: $gap;
+            }
+
+            @media (min-width:1024px) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
         }
     }
 }
