@@ -4,16 +4,12 @@ Vite, Graphql, Apollo/Client, React, NodeJS, Apollo/Server, Express
 ### Tech Stack
 <ul>
   <li><img style='width: 20px' src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" /><i> React JS</i> - for creating SPA</li>
-  <li><img style='width: 20px' src="https://www.svgrepo.com/show/303557/redux-logo.svg" /><i> Redux Toollkit</i> - for state managment</li>
   <li><img style='width: 20px' src="https://www.svgrepo.com/show/374167/vite.svg" /><i> Vite</i> - for best local development</li>
   <li><img style='width: 20px' src="https://www.svgrepo.com/show/374144/typescript.svg" /><i> TypeScript</i> - for type checking</li>
   <li><img style='width: 20px' src="https://duncanleung.com/static/4754115ddd48b63d252f8014e9a86177/92ab1/storybook.png" /><i> StoryBook</i> - for UI-kit and tests</li>
 <li>
   <img style='width: 20px'src='https://www.svgrepo.com/show/353834/graphql.svg' /> <img style='width: 20px'src='https://cdn.worldvectorlogo.com/logos/apollostack.svg' /><i> GraphQl & Apollo/Client</i> - for using Api</li>
-  <li><img style='width: 20px' src="https://seeklogo.com/images/S/strapi-icon-logo-2E03188067-seeklogo.com.png" /><i> Strapi</i> - for CMS</li>
-   <li><img style='width: 20px' src="https://cdn.worldvectorlogo.com/logos/framer-motion.svg" /><i> Framer motion</i> - for animations</li>
-  <li><i> react-oauth/google</i> - for authentification</li>
-  <li><img style='width: 20px' src="https://brandeps.com/icon-download/E/Eslint-icon-vector-02.svg" /> <img style='width: 20px' src="https://cdn.worldvectorlogo.com/logos/prettier-1.svg" /> <i> Eslint & Prettier</i> - for code quality</li>
+  <li><img style='width: 20px' src="https://brandeps.com/icon-download/E/Eslint-icon-vector-02.svg" /><i> Eslint</i> - for code quality</li>
 </ul>
 
 <hr/>
