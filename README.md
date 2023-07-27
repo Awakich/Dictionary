@@ -7,7 +7,8 @@ Vite, Graphql, Apollo/Client, React, NodeJS, Apollo/Server, Express
   <li><img style='width: 20px' src="https://www.svgrepo.com/show/374167/vite.svg" /><i> Vite</i> - for best local development</li>
   <li><img style='width: 20px' src="https://www.svgrepo.com/show/374144/typescript.svg" /><i> TypeScript</i> - for type checking</li>
   <li><img style='width: 20px' src="https://duncanleung.com/static/4754115ddd48b63d252f8014e9a86177/92ab1/storybook.png" /><i> StoryBook</i> - for UI-kit and tests</li>
-<li>
+<li><img style='width: 20px' src="https://www.svgrepo.com/show/330398/express.svg" /><i> Express</i> - for server logic</li>
+  <li>
   <img style='width: 20px'src='https://www.svgrepo.com/show/353834/graphql.svg' /> <img style='width: 20px'src='https://cdn.worldvectorlogo.com/logos/apollostack.svg' /><i> GraphQl & Apollo/Client</i> - for using Api</li>
   <li><img style='width: 20px' src="https://brandeps.com/icon-download/E/Eslint-icon-vector-02.svg" /><i> Eslint</i> - for code quality</li>
 </ul>
